@@ -1,0 +1,37 @@
+{
+   "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "commonjs": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "jest"
+    ],
+    "extends": "airbnb",
+    "rules": {
+        "indent": ["warn", 4],
+        "react/jsx-indent": ["warn", 4],
+        "react/jsx-filename-extension": ["warn", {"extensions": [".js", ".jsx"]}],
+        "import/no-extraneous-dependencies": "off",
+        "import/extensions": ["warn",
+            "never",
+            {
+                "jsx": "always",
+                "json": "always",
+                "sass": "always"
+            }
+        ]
+    },
+    "settings": {
+        "import/resolver": "webpack"
+    }
+}
