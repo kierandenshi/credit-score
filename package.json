@@ -6,7 +6,7 @@
   "author": {
     "name": "Kieran Denshi",
     "email": "kierandenshi@mac.com",
-    "url": "http://kierandenshi.com",
+    "url": "http://kierandenshi.com"
   },
   "scripts": {
     "lint": "eslint src",

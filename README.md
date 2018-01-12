@@ -1,12 +1,14 @@
 # Redux Starter
 
+Last updated: January 12, 2018
+
+Basic setup for a Webpack React Redux project. Contains:
+
 - React
 - Redux
-- Redux Observable
+- RxJS and Redux Observable
 - Jest
-- Webpack
-- SaSS (SCSS)
-- Babel
-- Eslint based on AirBnB
 
-Although I will mostly recommend using `create-react-app`, sometimes it's just fun to do it by hand. 
+
+
+ 
