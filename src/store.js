@@ -3,7 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProductio
 import { createEpicMiddleware } from 'redux-observable';
 import { isDev } from '@environment';
 
-import rootReducer, { epics as rootEpic } from './index';
+import rootReducer, { epics as rootEpic } from '@redux';
 
 const epicMiddleware = createEpicMiddleware(rootEpic, {
     dependencies: { },
@@ -11,7 +11,7 @@ const epicMiddleware = createEpicMiddleware(rootEpic, {
 
 const enableHMR = (store) => {
     if (isDev() && module.hot) {
-        module.hot.accept('./index', () => {
+        module.hot.accept('@redux', () => {
             store.replaceReducer(rootReducer);
             epicMiddleware.replaceEpic(rootEpic);
         });
