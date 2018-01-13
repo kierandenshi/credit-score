@@ -14,7 +14,7 @@ const alias = () => {
     };
 };
 
-module.exports = {
+module.exports = env => ({
     entry: ['react-hot-loader/patch', './src/index.js'],
     devtool: 'eval',
     devServer: {
@@ -28,6 +28,11 @@ module.exports = {
         }),
         new ExtractTextPlugin({
             filename: '[name].bundle.css',
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify(env === 'production' ? 'production' : 'development'),
+            },
         }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
@@ -57,4 +62,4 @@ module.exports = {
             },
         ],
     },
-};
+});
