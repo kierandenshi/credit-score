@@ -1,0 +1,3 @@
+// Media query library: http://include-media.com/documentation/
+$breakpoints: (phone: 480px, tablet: 800px, desktop: 1024px);
+@import '~include-media/dist/include-media';

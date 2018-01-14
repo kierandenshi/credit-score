@@ -1,0 +1,28 @@
+@import '~@css/includes/helpers';
+
+.credit-report {
+  &__main-section {
+    position: relative;
+    width: 298px;
+    height: 298px;
+    margin: auto;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      background: white;
+      opacity: 0.2;
+    }
+    // filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='svgMask'><feGaussianBlur stdDeviation='10' /></filter></svg>#svgMask");
+
+    @include media('>phone') {
+      width: 414px;
+      height: 414px;
+    }
+  }
+}

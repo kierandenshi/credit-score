@@ -27,18 +27,21 @@ class RadialChart extends Component {
                     </div>
                 </div>
                 <div className={'inset'}>
-                    <div className={'percentage'}>
-                        <span>{this.props.value}</span>
-                    </div>
+                    {this.props.children}
                 </div>
             </div>
         );
     }
 }
 
+RadialChart.defaultProps = {
+    children: null,
+};
+
 RadialChart.propTypes = {
     maxValue: PropTypes.number.isRequired,
     value: PropTypes.number.isRequired,
+    children: PropTypes.node,
 };
 
 export default RadialChart;

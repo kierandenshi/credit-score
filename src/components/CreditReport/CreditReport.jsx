@@ -6,31 +6,50 @@ import {
     getReportData,
 } from '@redux/report';
 import CreditRating from '@components/CreditRating';
+import './_CreditReport.scss';
 
 export class CreditReport extends Component {
     componentDidMount() {
         this.props.fetchReportBegin();
     }
 
-    render() {
-        const { data, hasData } = this.props;
-        console.log(data);
+    renderReportPages() {
+        const { data } = this.props;
 
-        return hasData ? (
-            <div className={'credit-report'}>
-                <h1>Your report</h1>
+        return (
+            <div className={'credit-report__report-pages'}>
                 <CreditRating data={data} />
             </div>
-        ) : (
-            <div>Loading</div>
+        );
+    }
+
+    renderReportLoading() {
+        return (
+            <div className={'credit-report__loading-spinner'}>Loading</div>
+        );
+    }
+
+    render() {
+        const { hasData } = this.props;
+
+        return (
+            <div className={'credit-report'}>
+                <div className={'credit-report__main-section'}>
+                    { hasData ? this.renderReportPages() : this.renderReportLoading() }
+                </div>
+            </div>
         );
     }
 }
 
+CreditReport.defaultProps = {
+    data: {},
+};
+
 CreditReport.propTypes = {
-    hasData: PropTypes.bool.isRequired,
-    data: PropTypes.shape().isRequired,
     fetchReportBegin: PropTypes.func.isRequired,
+    hasData: PropTypes.bool.isRequired,
+    data: PropTypes.shape({}),
 };
 
 export default connect(

@@ -21,10 +21,12 @@
     "rules": {
         "indent": ["warn", 4, {"SwitchCase": 1}],
         "function-paren-newline": "off",
+        "class-methods-use-this": "off",
         "react/jsx-indent": ["warn", 4],
         "react/jsx-indent-props": ["warn", 4],
         "react/jsx-filename-extension": ["warn", {"extensions": [".js", ".jsx"]}],
         "react/jsx-curly-brace-presence": "off",
+        "import/prefer-default-export": "off",
         "import/no-extraneous-dependencies": "off",
         "import/extensions": ["warn",
             "never",

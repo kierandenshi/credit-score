@@ -1,7 +1,7 @@
-$circle-size: 120px;
+$circle-size: 320px;
 $circle-background: #d6dadc;
 $circle-color: #97a71d;
-$inset-size: 90px;
+$inset-size: 300px;
 $inset-color: #fbfbfb;
 $transition-length: 1s;
 $percentage-color: #97a71d;
@@ -9,7 +9,12 @@ $percentage-font-size: 22px;
 $percentage-text-width: 57px;
 
 .radial-chart {
-  margin: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
   width:  $circle-size;
   height: $circle-size;
 

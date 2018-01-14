@@ -9,16 +9,16 @@ const CreditRating = ({ data }) => {
     return (
         <div className={'credit-rating'}>
             <RadialChart
-              minValue={minScoreValue}
-              maxValue={maxScoreValue}
-              value={score}
+                minValue={minScoreValue}
+                maxValue={maxScoreValue}
+                value={score}
             />
         </div>
     );
 };
 
 CreditRating.propTypes = {
-    data: PropTypes.shape().isRequired,
+    data: PropTypes.shape({}).isRequired,
 };
 
 export default CreditRating;
