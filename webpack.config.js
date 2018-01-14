@@ -14,6 +14,7 @@ const alias = () => {
         '@test': resolve('test'),
         '@api': resolve('api.js'),
         '@environment': resolve('environment.js'),
+        '@localisation': resolve('localisation.js'),
     };
 };
 

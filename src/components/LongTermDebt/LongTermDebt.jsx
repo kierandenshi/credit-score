@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { localise } from '@environment';
 import './_LongTermDebt.scss';
 
 const LongTermDebt = ({ data }) => {
@@ -7,7 +8,7 @@ const LongTermDebt = ({ data }) => {
 
     return (
         <div className={'long-term-debt'}>
-            {currentLongTermDebt}
+            {localise.currency(currentLongTermDebt)}
         </div>
     );
 };

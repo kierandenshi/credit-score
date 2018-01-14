@@ -6,6 +6,7 @@ import {
     getReportData,
 } from '@redux/report';
 import CreditRating from '@components/CreditRating';
+import LongTermDebt from '@components/LongTermDebt';
 import './_CreditReport.scss';
 
 export class CreditReport extends Component {
@@ -19,6 +20,7 @@ export class CreditReport extends Component {
         return (
             <div className={'credit-report__report-pages'}>
                 <CreditRating data={data} />
+                <LongTermDebt data={data} />
             </div>
         );
     }
