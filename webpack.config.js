@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const alias = () => {
     const resolve = destination => path.resolve(__dirname, 'src', destination);
@@ -29,6 +30,9 @@ module.exports = env => ({
         new ExtractTextPlugin({
             filename: '[name].bundle.css',
         }),
+        new CopyWebpackPlugin([
+            { from: 'src/images', to: 'images' },
+        ]),
         new webpack.DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify(env === 'production' ? 'production' : 'development'),
