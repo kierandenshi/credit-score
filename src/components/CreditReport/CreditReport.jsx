@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
     fetchReportBegin,
-    fetchReportCancel,
+    getReportData,
 } from '@redux/report';
+import CreditRating from '@components/CreditRating';
 
 export class CreditReport extends Component {
     componentDidMount() {
@@ -12,21 +13,32 @@ export class CreditReport extends Component {
     }
 
     render() {
-        return (
-            <div className={'credit-report'}>Your report</div>
+        const { data, hasData } = this.props;
+        console.log(data);
+
+        return hasData ? (
+            <div className={'credit-report'}>
+                <h1>Your report</h1>
+                <CreditRating data={data} />
+            </div>
+        ) : (
+            <div>Loading</div>
         );
     }
 }
 
 CreditReport.propTypes = {
+    hasData: PropTypes.bool.isRequired,
+    data: PropTypes.shape().isRequired,
     fetchReportBegin: PropTypes.func.isRequired,
-    fetchReportCancel: PropTypes.func.isRequired,
 };
 
 export default connect(
-    null,
+    state => ({
+        hasData: state.report.hasData,
+        data: getReportData(state),
+    }),
     {
         fetchReportBegin,
-        fetchReportCancel,
     },
 )(CreditReport);

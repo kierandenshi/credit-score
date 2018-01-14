@@ -5,6 +5,7 @@ import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/takeUntil';
 import 'rxjs/add/observable/of';
 import { combineEpics } from 'redux-observable';
+import { createSelector } from 'reselect';
 
 const createAction = type => payload => ({ type, payload });
 
@@ -29,9 +30,9 @@ export const epics = combineEpics(
             ),
 );
 
-
 export const initialState = {
     isFetching: false,
+    hasData: false,
     data: {},
 };
 
@@ -41,12 +42,14 @@ export default (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 isFetching: true,
+                hasData: false,
             };
 
         case FETCH_REPORT_COMPLETE:
             return {
                 ...state,
                 isFetching: false,
+                hasData: true,
                 data: payload,
             };
 
@@ -58,3 +61,8 @@ export default (state = initialState, { type, payload }) => {
             return state;
     }
 };
+
+export const getReportData = createSelector(
+    state => state.report.data,
+    data => (data ? data.creditReportInfo : {}),
+);
