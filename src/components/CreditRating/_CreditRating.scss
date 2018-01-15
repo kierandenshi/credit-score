@@ -1,0 +1,12 @@
+@import '~@css/includes/helpers';
+
+.credit-rating {
+  position: relative;
+  width: 298px;
+  height: 298px;
+
+  @include media('>phone') {
+    width: 414px;
+    height: 414px;
+  }
+}

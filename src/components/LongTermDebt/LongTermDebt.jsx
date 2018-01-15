@@ -8,7 +8,9 @@ const LongTermDebt = ({ data }) => {
 
     return (
         <div className={'long-term-debt'}>
-            {localise.currency(currentLongTermDebt)}
+            <div className={'long-term-debt__inner'}>
+                {localise.currency(currentLongTermDebt)}
+            </div>
         </div>
     );
 };

@@ -39,9 +39,7 @@ export class CreditReport extends Component {
 
         return (
             <div className={'credit-report'}>
-                <div className={'credit-report__main-section'}>
-                    { hasData ? this.renderReportPages() : this.renderReportLoading() }
-                </div>
+                { hasData ? this.renderReportPages() : this.renderReportLoading() }
             </div>
         );
     }

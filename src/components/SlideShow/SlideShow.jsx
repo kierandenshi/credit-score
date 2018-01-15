@@ -1,12 +1,50 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import Transition from 'react-transition-group/Transition';
+import TransitionGroup from 'react-transition-group/TransitionGroup';
 import {
     schedule,
     deschedule,
 } from '@middleware/scheduledActionMiddleware';
 import { showNextSlide } from '@redux/slideshow';
 import './_SlideShow.scss';
+
+const SlideTransition = ({ children, duration, in: inProp }) => {
+    const defaultStyle = {
+        transition: `${duration}ms`,
+        transitionProperty: 'left',
+        position: 'absolute',
+    };
+
+    const transitionStyles = {
+        entering: { left: '414px' },
+        entered: { left: '0px' },
+        exiting: { left: '-414px' },
+        exited: { left: '0px' },
+    };
+
+    return (
+        <Transition
+            in={inProp}
+            timeout={{
+                enter: duration,
+                exit: duration,
+            }}
+        >
+            {
+                (status) => {
+                    if (status === 'exited') {
+                        return null;
+                    }
+                    return React.cloneElement(children, {
+                        style: { ...defaultStyle, ...transitionStyles[status] },
+                    });
+                }
+            }
+        </Transition>
+    );
+};
 
 export class SlideShow extends Component {
     constructor(props) {
@@ -38,8 +76,12 @@ export class SlideShow extends Component {
 
         return (
             /* eslint-disable */
-            <div className={'slide-show'} onClick={this.skipSlide}> 
-                {children && children[currentSlide]}
+            <div className={'slide-show'} onClick={this.skipSlide} ref={(e) => { this.container = e; }}>
+                <TransitionGroup>
+                    <SlideTransition in key={`slide${currentSlide}`} duration={500}>
+                        <div>{children[currentSlide]}</div>
+                    </SlideTransition>
+                </TransitionGroup>
             </div>
             /* eslint-enable */
         );
