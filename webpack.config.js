@@ -12,7 +12,7 @@ const alias = () => {
         '@redux': resolve('redux'),
         '@components': resolve('components'),
         '@test': resolve('test'),
-        '@api': resolve('api.js'),
+        '@middleware': resolve('middleware'),
         '@environment': resolve('environment.js'),
         '@localisation': resolve('localisation.js'),
     };
