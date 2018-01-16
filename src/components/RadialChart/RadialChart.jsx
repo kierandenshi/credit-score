@@ -1,38 +1,57 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled, { keyframes } from 'styled-components';
 import './_RadialChart.scss';
 
-class RadialChart extends Component {
-    componentDidMount() {
-        const { value, maxValue } = this.props;
-        const r = (180 / 100) * ((value / maxValue) * 100);
-        setTimeout(() => {
-            this.fullMask.style.transform = `rotate(${r}deg)`;
-            this.fullMaskFill.style.transform = `rotate(${r}deg)`;
-            this.halfMaskFill.style.transform = `rotate(${r}deg)`;
-            this.halfMaskFillFix.style.transform = `rotate(${r * 2}deg)`;
-        }, 1000);
-    }
+const RadialChart = ({
+    maxValue,
+    value,
+    children,
+}) => {
+    // Radius = (size / 2) - (stroke / 2)
+    // Circumference = 2 * π * Radius
+    // The length of the offset is inversely proportional to the amount of progress.
+    // So to display 60 % progress, the offset as 40 % of the circumference.
+    const perc = value / maxValue;
 
-    render() {
-        return (
-            <div className={'radial-chart'}>
-                <div className={'circle'}>
-                    <div className={'mask full'} ref={(e) => { this.fullMask = e; }}>
-                        <div className={'fill'} ref={(e) => { this.fullMaskFill = e; }} />
-                    </div>
-                    <div className={'mask half'}>
-                        <div className={'fill'} ref={(e) => { this.halfMaskFill = e; }} />
-                        <div className={'fill fix'} ref={(e) => { this.halfMaskFillFix = e; }} />
-                    </div>
-                </div>
-                <div className={'inset'}>
-                    {this.props.children}
-                </div>
-            </div>
-        );
-    }
-}
+    const size = 320;
+    const stroke = 8;
+    const radius = (size / 2) - (stroke / 2);
+    const dashArray = (2 * Math.PI * radius);
+    const dashOffset = (2 * Math.PI * radius) * (1 - perc);
+
+
+    const fill = keyframes`
+        0% {
+            stroke-dashoffset: ${dashArray};
+        }
+        100% {
+            stroke-dashoffset: ${dashOffset};
+        }
+    `;
+
+    const AnimatedChart = styled.svg`
+        transform: rotate(-90deg);
+        & circle {
+            stroke-dasharray: ${dashArray};
+            animation: ${fill} 2s forwards;
+        }
+    `;
+
+    return (
+        <div className={'radial-chart'}>
+            <AnimatedChart width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+                <circle
+                    cx={size / 2}
+                    cy={size / 2}
+                    r={radius}
+                    fill={'none'}
+                    strokeWidth={stroke}
+                />
+            </AnimatedChart>
+        </div>
+    );
+};
 
 RadialChart.defaultProps = {
     children: null,

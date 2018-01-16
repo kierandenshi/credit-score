@@ -1,12 +1,37 @@
 @import '~@css/includes/helpers';
 
 .credit-report {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url('/images/background.png');
+  background-size: cover;
+  background-position: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    clip-path: circle(149px);
+
+    @include media('>phone') {
+      clip-path: circle(212px);
+    }
+  }
+
   &__report-pages {
     position: relative;
     width: 298px;
     height: 298px;
     margin: auto;
-    
+    clip-path: circle(149px);
+
     &::before {
       content: '';
       position: absolute;
@@ -22,6 +47,7 @@
     @include media('>phone') {
       width: 414px;
       height: 414px;
+      clip-path: circle(212px);
     }
   }
 }
