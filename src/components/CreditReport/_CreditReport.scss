@@ -1,0 +1,27 @@
+@import '~@css/includes/helpers';
+
+.credit-report {
+  &__report-pages {
+    position: relative;
+    width: 298px;
+    height: 298px;
+    margin: auto;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      background: white;
+      opacity: 0.2;
+    }
+
+    @include media('>phone') {
+      width: 414px;
+      height: 414px;
+    }
+  }
+}

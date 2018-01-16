@@ -11,7 +11,10 @@ const alias = () => {
         '@css': resolve('css'),
         '@redux': resolve('redux'),
         '@components': resolve('components'),
+        '@test': resolve('test'),
+        '@middleware': resolve('middleware'),
         '@environment': resolve('environment.js'),
+        '@localisation': resolve('localisation.js'),
     };
 };
 
