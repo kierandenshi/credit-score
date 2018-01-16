@@ -62,6 +62,10 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/src/test/setup.js",
+    "coverageReporters": [
+      "lcovonly",
+      "text-summary"
+    ],
     "moduleNameMapper": {
       "\\.(scss)$": "<rootDir>/__mocks__/styleMock.js",
       "^@components(.*)$": "<rootDir>/src/components$1",
