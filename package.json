@@ -10,7 +10,7 @@
   },
   "scripts": {
     "lint": "eslint src",
-    "unit": "jest --silent",
+    "unit": "jest --silent --coverage",
     "test": "yarn lint && yarn unit",
     "watch": "webpack --progress --watch",
     "start": "webpack-dev-server --env.development",
@@ -65,6 +65,7 @@
     "moduleNameMapper": {
       "\\.(scss)$": "<rootDir>/__mocks__/styleMock.js",
       "^@components(.*)$": "<rootDir>/src/components$1",
+      "^@middleware(.*)$": "<rootDir>/src/middleware$1",
       "^@redux(.*)$": "<rootDir>/src/redux$1",
       "^@test(.*)$": "<rootDir>/src/test$1",
       "^@environment(.*)$": "<rootDir>/src/environment.js",
