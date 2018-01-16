@@ -14,7 +14,8 @@
     "test": "yarn lint && yarn unit",
     "watch": "webpack --progress --watch",
     "start": "webpack-dev-server --env.development",
-    "build": "webpack --env.production"
+    "build": "webpack --env.production",
+    "deploy": "webpack --env.production && aws s3 sync dist/ s3://credit-score-demo --delete"
   },
   "dependencies": {
     "include-media": "^1.4.9",
