@@ -1,12 +1,14 @@
 @import './includes/helpers';
 
-html {
+html, body {
   height: 100%;
+  margin: 0;
 }
 
 body {
   color: magenta;
-  background-image: url('/images/background.png');
-  background-size: cover;
-  background-position: center;
+}
+
+div.root {
+  height: 100%;
 }
