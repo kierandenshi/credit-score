@@ -5,13 +5,12 @@
   width: 298px;
   height: 298px;
   cursor: pointer;
-  clip-path: circle(298px);
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 
   @include media('>phone') {
     width: 414px;
     height: 414;
     cursor: pointer;
-    clip-path: circle(414px);
   }
 
   &__slide {

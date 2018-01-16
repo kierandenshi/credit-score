@@ -46,7 +46,6 @@ const RadialChart = ({
                     cy={size / 2}
                     r={radius}
                     fill={'none'}
-                    stroke={'#f77a52'}
                     strokeWidth={stroke}
                 />
             </AnimatedChart>
