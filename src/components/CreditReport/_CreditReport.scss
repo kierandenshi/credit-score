@@ -6,7 +6,8 @@
     width: 298px;
     height: 298px;
     margin: auto;
-    
+    overflow: hidden;
+
     &::before {
       content: '';
       position: absolute;
