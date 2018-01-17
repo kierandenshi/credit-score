@@ -17,7 +17,7 @@ const CreditRating = ({ data }) => {
             </div>
             <div className={'credit-rating__info'}>
                 <span>Your credit rating is</span>
-                <span>{score}</span>
+                <span className={'strong'}>{score}</span>
                 <span>{`out of ${maxScoreValue}`}</span>
             </div>
         </div>

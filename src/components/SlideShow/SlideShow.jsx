@@ -56,7 +56,7 @@ export class SlideShow extends Component {
 
     componentDidMount() {
         const { schedule } = this.props; // eslint-disable-line no-shadow
-        // this.slides > 1 && schedule('slideshowTick', { action: showNextSlide(this.slides), every: this.delay });
+        this.slides > 1 && schedule('slideshowTick', { action: showNextSlide(this.slides), every: this.delay });
     }
 
     componentWillUnmount() {

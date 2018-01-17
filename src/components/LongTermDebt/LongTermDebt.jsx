@@ -10,7 +10,7 @@ const LongTermDebt = ({ data }) => {
         <div className={'long-term-debt'}>
             <div className={'long-term-debt__info'}>
                 <span>Your long term debt total</span>
-                <span>{localise.currency(currentLongTermDebt)}</span>
+                <span className={'strong'}>{localise.currency(currentLongTermDebt)}</span>
                 <span>{`Total credit limit ${currentLongTermCreditLimit || 0}`}</span>
             </div>
         </div>
