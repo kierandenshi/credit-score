@@ -8,11 +8,18 @@ const CreditRating = ({ data }) => {
 
     return (
         <div className={'credit-rating'}>
-            <RadialChart
-                minValue={minScoreValue}
-                maxValue={maxScoreValue}
-                value={score}
-            />
+            <div className={'credit-rating__chart'}>
+                <RadialChart
+                    minValue={minScoreValue}
+                    maxValue={maxScoreValue}
+                    value={score}
+                />
+            </div>
+            <div className={'credit-rating__info'}>
+                <span>Your credit rating is</span>
+                <span className={'strong'}>{score}</span>
+                <span>{`out of ${maxScoreValue}`}</span>
+            </div>
         </div>
     );
 };

@@ -4,12 +4,14 @@ import { localise } from '@environment';
 import './_LongTermDebt.scss';
 
 const LongTermDebt = ({ data }) => {
-    const { currentLongTermDebt } = data;
+    const { currentLongTermDebt, currentLongTermCreditLimit } = data;
 
     return (
         <div className={'long-term-debt'}>
-            <div className={'long-term-debt__inner'}>
-                {localise.currency(currentLongTermDebt)}
+            <div className={'long-term-debt__info'}>
+                <span>Your long term debt total</span>
+                <span className={'strong'}>{localise.currency(currentLongTermDebt)}</span>
+                <span>{`Total credit limit ${currentLongTermCreditLimit || 0}`}</span>
             </div>
         </div>
     );
