@@ -1,0 +1,416 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SlideShow component should render 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): ShallowWrapper {
+    "length": 1,
+    Symbol(enzyme.__root__): [Circular],
+    Symbol(enzyme.__unrendered__): <SlideShow
+      currentSlide={0}
+      deschedule={[MockFunction]}
+      schedule={
+        [MockFunction] {
+          "calls": Array [
+            Array [
+              "slideshowTick",
+              Object {
+                "action": Object {
+                  "payload": 2,
+                  "type": "NEXT_SLIDE",
+                },
+                "every": 10,
+              },
+            ],
+          ],
+        }
+      }
+      showNextSlide={[MockFunction]}
+    >
+      <div
+        id="child1"
+      />
+      <div
+        id="child2"
+      />
+    </SlideShow>,
+    Symbol(enzyme.__renderer__): Object {
+      "batchedUpdates": [Function],
+      "getNode": [Function],
+      "render": [Function],
+      "simulateEvent": [Function],
+      "unmount": [Function],
+    },
+    Symbol(enzyme.__node__): Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <TransitionGroup
+          childFactory={[Function]}
+          component="div"
+        >
+          <SlideTransition
+            duration={500}
+            in={true}
+          >
+            <div>
+              <div
+                id="child1"
+              />
+            </div>
+          </SlideTransition>
+        </TransitionGroup>,
+        "className": "slide-show",
+        "onClick": [Function],
+      },
+      "ref": [Function],
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "childFactory": [Function],
+          "children": <SlideTransition
+            duration={500}
+            in={true}
+          >
+            <div>
+              <div
+                id="child1"
+              />
+            </div>
+          </SlideTransition>,
+          "component": "div",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": "slide0",
+          "nodeType": "function",
+          "props": Object {
+            "children": <div>
+              <div
+                id="child1"
+              />
+            </div>,
+            "duration": 500,
+            "in": true,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                id="child1"
+              />,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "child1",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": "div",
+    },
+    Symbol(enzyme.__nodes__): Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <TransitionGroup
+            childFactory={[Function]}
+            component="div"
+          >
+            <SlideTransition
+              duration={500}
+              in={true}
+            >
+              <div>
+                <div
+                  id="child1"
+                />
+              </div>
+            </SlideTransition>
+          </TransitionGroup>,
+          "className": "slide-show",
+          "onClick": [Function],
+        },
+        "ref": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "childFactory": [Function],
+            "children": <SlideTransition
+              duration={500}
+              in={true}
+            >
+              <div>
+                <div
+                  id="child1"
+                />
+              </div>
+            </SlideTransition>,
+            "component": "div",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": "slide0",
+            "nodeType": "function",
+            "props": Object {
+              "children": <div>
+                <div
+                  id="child1"
+                />
+              </div>,
+              "duration": 500,
+              "in": true,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  id="child1"
+                />,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "id": "child1",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              "type": "div",
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    Symbol(enzyme.__options__): Object {
+      "adapter": ReactSixteenAdapter {
+        "options": Object {
+          "enableComponentDidUpdateOnSetState": true,
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__unrendered__): null,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <TransitionGroup
+        childFactory={[Function]}
+        component="div"
+      >
+        <SlideTransition
+          duration={500}
+          in={true}
+        >
+          <div>
+            <div
+              id="child1"
+            />
+          </div>
+        </SlideTransition>
+      </TransitionGroup>,
+      "className": "slide-show",
+      "onClick": [Function],
+    },
+    "ref": [Function],
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "childFactory": [Function],
+        "children": <SlideTransition
+          duration={500}
+          in={true}
+        >
+          <div>
+            <div
+              id="child1"
+            />
+          </div>
+        </SlideTransition>,
+        "component": "div",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": "slide0",
+        "nodeType": "function",
+        "props": Object {
+          "children": <div>
+            <div
+              id="child1"
+            />
+          </div>,
+          "duration": 500,
+          "in": true,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              id="child1"
+            />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "id": "child1",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <TransitionGroup
+          childFactory={[Function]}
+          component="div"
+        >
+          <SlideTransition
+            duration={500}
+            in={true}
+          >
+            <div>
+              <div
+                id="child1"
+              />
+            </div>
+          </SlideTransition>
+        </TransitionGroup>,
+        "className": "slide-show",
+        "onClick": [Function],
+      },
+      "ref": [Function],
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "childFactory": [Function],
+          "children": <SlideTransition
+            duration={500}
+            in={true}
+          >
+            <div>
+              <div
+                id="child1"
+              />
+            </div>
+          </SlideTransition>,
+          "component": "div",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": "slide0",
+          "nodeType": "function",
+          "props": Object {
+            "children": <div>
+              <div
+                id="child1"
+              />
+            </div>,
+            "duration": 500,
+            "in": true,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                id="child1"
+              />,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "child1",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

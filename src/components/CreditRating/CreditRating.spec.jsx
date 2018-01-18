@@ -12,7 +12,7 @@ describe('CreditRating component', () => {
     const wrapper = shallow(<CreditRating {...getProps(initialProps)} />);
 
     it('should render', () => {
-        expect(wrapper.find('.credit-rating')).toHaveLength(1);
+        expect(wrapper.find('.credit-rating')).toMatchSnapshot();
     });
 
     it('should pass correct props to chart', () => {

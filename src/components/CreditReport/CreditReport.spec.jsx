@@ -18,7 +18,7 @@ describe('Credit report component', () => {
     const wrapper = shallow(<CreditReport {...getProps(initialProps)} />);
 
     it('should render', () => {
-        expect(wrapper.find('.credit-report')).toHaveLength(1);
+        expect(wrapper.find('.credit-report')).toMatchSnapshot();
     });
 
     it('should render a loading message', () => {

@@ -17,7 +17,7 @@ describe('SlideShow component', () => {
     const { slides, delay } = wrapper.instance();
 
     it('should render', () => {
-        expect(wrapper.find('.slide-show')).toHaveLength(1);
+        expect(wrapper.find('.slide-show')).toMatchSnapshot();
     });
 
     it('should start the animation scheduler', () => {
