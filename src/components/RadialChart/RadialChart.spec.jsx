@@ -5,6 +5,6 @@ import RadialChart from './RadialChart.jsx';
 describe('RadialChart component', () => {
     const wrapper = shallow(<RadialChart />);
     it('should render', () => {
-        expect(wrapper.find('.radial-chart')).toHaveLength(1);
+        expect(wrapper.find('.radial-chart')).toMatchSnapshot();
     });
 });

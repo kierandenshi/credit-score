@@ -11,6 +11,6 @@ describe('CreditRating component', () => {
     const wrapper = shallow(<LongTermDebt {...getProps(initialProps)} />);
 
     it('should render', () => {
-        expect(wrapper.find('.long-term-debt')).toHaveLength(1);
+        expect(wrapper.find('.long-term-debt')).toMatchSnapshot();
     });
 });
