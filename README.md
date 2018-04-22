@@ -2,11 +2,11 @@
 
 ## Description
 
-A version of the Clearscore circular score indicator, as shown on https://www.clearscore.com/account/ and https://youtu.be/tIjtcL5Z0Wk?t=5. 
+A version of the ClearScore circular score indicator, as shown on https://www.clearscore.com/account/ and https://youtu.be/tIjtcL5Z0Wk?t=5. 
 
 ### Task Requirements
 - Show the given score in the middle and with an arc outside that represents the score out of 700
-- The arc animates on load ~~with a bouncing effect at the end~~
+- The arc animates on load with a bouncing effect at the end
 - Write a service to connect to the dashboard data https://s3.amazonaws.com/cdn.clearscore.com/native/interview_test/creditReportInfo.json
 - Build the first score indicator slide, and animate in a second panel for long term debt ( take data from the above json )
 - The solution displays correctly on modern browsers (including mobile)
@@ -56,7 +56,7 @@ React is the framework I have the most time and up to date experience with. I fa
 
 I really like the simplicity of redux. There's nothing magic going on behind the scenes and as plain JS Objects are predictable and easily inspectable, it's simple to see what's going on (and the redux devtools extension is an extra win). I actually like how explicit the action creating boilerplate is.
 
-### Redux Observable
+### Redux Observable
 
 I've recently used this library in a smaller project instead of the more traditional choice of Redux Saga. It's too early for me to evaluate the 2 together, however Observables do seem easier to unit test than Saga's generators.
 
@@ -69,7 +69,7 @@ I've recently used this library in a smaller project instead of the more traditi
 - Unit tests are rudimentary or totally missing in some places - TDD disipline has not been adhered to :(
 - No isomorphic rendering
 - No production code optimisations or code splitting
-- Circle script is sub-optimal and appears to build `master` twice (excuse: this is the first time I've implemented CI)  
+- Circle script is sub-optimal and appears to build `master` twice   
 - The git history is very untidy 
 
 
