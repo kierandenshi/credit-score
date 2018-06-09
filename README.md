@@ -1,5 +1,7 @@
 # Credit Score SPA
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kierandenshi/credit-score.svg)](https://greenkeeper.io/)
+
 ## Description
 
 A version of the ClearScore circular score indicator, as shown on https://www.clearscore.com/account/ and https://youtu.be/tIjtcL5Z0Wk?t=5. 
